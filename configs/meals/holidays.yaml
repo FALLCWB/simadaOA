@@ -1,0 +1,71 @@
+# Holiday-specific meal templates
+# These modify or replace standard meals on specific dates
+
+festa_junina:
+  description: "Festa Junina (June festivals) -- arraial foods"
+  extra_carb_range: [50, 80]
+  additional_meals:
+    - name: "comidas_tipicas"
+      time_range: ["14:00", "21:00"]
+      probability: 0.80
+      slots:
+        - category: festa_junina
+          probability: 0.90
+          servings: [1, 3]
+          preferred: ["Pamonha", "Canjica", "Pe de moleque", "Pipoca doce"]
+        - category: festa_junina
+          probability: 0.60
+          servings: [1, 1]
+          preferred: ["Quentao"]
+  meal_modifiers:
+    jantar:
+      extra_carb_pct: 20
+      extra_slots:
+        - category: festa_junina
+          probability: 0.70
+          servings: [1, 2]
+
+natal:
+  description: "Christmas -- Brazilian Christmas dinner"
+  extra_carb_range: [60, 100]
+  duration_days: 2
+  meal_modifiers:
+    jantar:
+      replaces_standard: true
+      total_carb_range: [80, 140]
+      slots:
+        - category: natal
+          probability: 0.95
+          servings: [1, 2]
+          preferred: ["Chester assado", "Salpicao", "Rabanada"]
+        - category: cereal
+          probability: 0.90
+          servings: [1, 2]
+        - category: sobremesa
+          probability: 0.80
+          servings: [1, 2]
+          preferred: ["Panetone", "Rabanada"]
+        - category: bebida
+          probability: 0.60
+          servings: [1, 2]
+
+pascoa:
+  description: "Easter -- chocolate eggs and family lunch"
+  extra_snacking:
+    probability: 0.80
+    category: pascoa
+    preferred: ["Ovo de pascoa", "Chocolate ao leite"]
+    carb_range: [20, 60]
+    events_per_day: [2, 5]
+  duration_days: 2
+
+carnaval:
+  description: "Carnival -- irregular meals, alcohol, sleep disruption"
+  duration_days: 4
+  modifiers:
+    wake_time_shift_hours: 2.0
+    sleep_time_shift_hours: 3.0
+    meal_skip_probability: 0.30
+    alcohol_probability: 0.60
+    alcohol_drinks: [3, 6]
+    meal_irregularity_factor: 2.0

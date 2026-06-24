@@ -1,0 +1,56 @@
+# Multiple Daily Injections (MDI) profiles
+# Models long-acting basal insulin + rapid-acting bolus pens
+
+basal_insulin:
+  glargine_u300:
+    description: "Toujeo (glargine U-300) -- truly flat profile"
+    peak_hours: null
+    duration_hours: 36
+    variability_pct: 5
+  glargine_u100:
+    description: "Lantus (glargine U-100) -- slight peak at 6-8h"
+    peak_hours: [6, 8]
+    peak_multiplier: 1.10
+    duration_hours: 24
+    variability_pct: 10
+  degludec:
+    description: "Tresiba (degludec) -- ultra-long, flat"
+    peak_hours: null
+    duration_hours: 42
+    variability_pct: 4
+  nph:
+    description: "NPH -- pronounced peak, shorter duration"
+    peak_hours: [4, 8]
+    peak_multiplier: 1.50
+    duration_hours: 16
+    variability_pct: 30
+
+injection_timing:
+  adherent:
+    preferred_time_hour: 22.0
+    time_std_minutes: 15.0
+    skip_probability: 0.01
+  moderate:
+    preferred_time_hour: 22.0
+    time_std_minutes: 45.0
+    skip_probability: 0.03
+  nonadherent:
+    preferred_time_hour: 22.0
+    time_std_minutes: 90.0
+    skip_probability: 0.08
+
+bolus_pen:
+  rapid_acting: "lispro"
+  onset_minutes: 15
+  peak_minutes: [60, 90]
+  duration_hours: 4
+  dose_increment_units: 0.5
+
+site_rotation:
+  lipodystrophy_probability:
+    adherent: 0.02
+    moderate: 0.10
+    nonadherent: 0.25
+  absorption_variability_pct:
+    normal: 5
+    lipodystrophy: 25

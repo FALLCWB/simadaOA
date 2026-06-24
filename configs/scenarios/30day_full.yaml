@@ -1,0 +1,81 @@
+# 30-day full simulation — comprehensive evaluation scenario
+# Large cohort, all features enabled, multiple perturbations
+
+seed: 42
+
+scenario:
+  name: "30day_full"
+  description: "30-day comprehensive simulation for full evaluation"
+  duration_days: 30
+  start_date: "2026-06-01"
+  cohort:
+    size: 90
+    archetype_distribution:
+      adherent: 0.33
+      moderate: 0.34
+      nonadherent: 0.33
+    insulin_regimen_distribution:
+      pump: 0.60
+      mdi: 0.40
+
+meals:
+  locale: "brazil"
+  taco_path: "data/taco/taco_foods.csv"
+  weekend_carb_increase_pct: 15.0
+  holiday_carb_increase_pct: 30.0
+
+behavior:
+  exercise:
+    enabled: true
+  stress:
+    enabled: true
+    illness_probability_per_day: 0.01
+  alcohol:
+    enabled: true
+  snacking:
+    enabled: true
+
+insulin:
+  target_bg: 120.0
+  iob_duration_hours: 4.0
+  dawn_phenomenon: true
+
+perturbations:
+  enabled: true
+  schedule:
+    - type: "sensor_dropout"
+      day: 7
+      duration_minutes: 120
+      affects: "random_10pct"
+    - type: "sensor_drift"
+      day: 14
+      duration_minutes: 360
+      magnitude: 20.0
+      affects: "random_15pct"
+    - type: "illness_gradual"
+      day_range: [10, 13]
+      magnitude: 1.8
+      affects: "random_10pct"
+    - type: "illness_sudden"
+      day: 22
+      magnitude: 1.5
+      affects: "random_5pct"
+    - type: "pump_occlusion_complete"
+      day: 18
+      duration_minutes: 90
+      affects: "random_5pct"
+    - type: "meal_misestimation_spike"
+      day: 25
+      magnitude: 2.5
+      affects: "nonadherent"
+
+output:
+  directory: "results"
+  formats: ["parquet"]
+  streaming: true
+  generate_reports: true
+  metrics: ["tir", "tbr_l1", "tbr_l2", "tar_l1", "tar_l2", "gmi", "cv", "lbgi", "hbgi", "mage", "modd"]
+
+parallel:
+  enabled: true
+  n_workers: 8

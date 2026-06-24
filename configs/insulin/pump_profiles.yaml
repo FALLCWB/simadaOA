@@ -1,0 +1,60 @@
+# Pump therapy basal rate profiles
+# Circadian variation accounts for dawn phenomenon and diurnal patterns
+# Rates expressed as multipliers of patient's base_rate = TDI * 0.5 / 24
+
+standard_profile:
+  description: "Standard circadian basal profile for insulin pump"
+  segments:
+    - start_hour: 0
+      end_hour: 3
+      multiplier: 0.80
+    - start_hour: 3
+      end_hour: 6
+      multiplier: 1.20
+    - start_hour: 6
+      end_hour: 9
+      multiplier: 1.30
+    - start_hour: 9
+      end_hour: 12
+      multiplier: 1.00
+    - start_hour: 12
+      end_hour: 15
+      multiplier: 1.00
+    - start_hour: 15
+      end_hour: 18
+      multiplier: 0.90
+    - start_hour: 18
+      end_hour: 21
+      multiplier: 1.00
+    - start_hour: 21
+      end_hour: 24
+      multiplier: 0.90
+
+exercise_temp_basal:
+  description: "Temporary basal reduction during exercise"
+  reduction_pct: 50
+  duration_hours: 2
+  applies_to: ["adherent"]
+
+site_change_interval_days:
+  adherent: 3
+  moderate: 4
+  nonadherent: 5
+
+pump_issues:
+  kinked_cannula:
+    probability_per_day:
+      adherent: 0.01
+      moderate: 0.03
+      nonadherent: 0.05
+    delivery_reduction_pct: [50, 80]
+    detection_delay_hours:
+      adherent: 1
+      moderate: 3
+      nonadherent: 6
+  reservoir_empty:
+    probability_per_3days:
+      adherent: 0.01
+      moderate: 0.05
+      nonadherent: 0.15
+    interruption_hours: [2, 4]

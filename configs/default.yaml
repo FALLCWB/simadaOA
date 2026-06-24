@@ -1,0 +1,68 @@
+# simada default configuration
+# This file shows all available options with their default values.
+# Override individual settings by creating a scenario-specific YAML file.
+
+seed: 42
+
+scenario:
+  name: "default"
+  description: "Default single-week simulation"
+  duration_days: 7
+  start_date: "2026-01-05"
+  cohort:
+    size: 30
+    archetype_distribution:
+      adherent: 0.30
+      moderate: 0.50
+      nonadherent: 0.20
+    patient_pool: "all"
+    insulin_regimen_distribution:
+      pump: 0.60
+      mdi: 0.40
+    sensor: "Dexcom"
+    pump: "Insulet"
+  holidays: []
+
+meals:
+  locale: "brazil"
+  taco_path: "data/taco/taco_foods.csv"
+  weekend_carb_increase_pct: 15.0
+  holiday_carb_increase_pct: 30.0
+
+behavior:
+  exercise:
+    enabled: true
+  stress:
+    enabled: true
+    illness_probability_per_day: 0.01
+  alcohol:
+    enabled: true
+  snacking:
+    enabled: true
+
+insulin:
+  target_bg: 120.0
+  iob_duration_hours: 4.0
+  dawn_phenomenon: true
+
+perturbations:
+  enabled: false
+  schedule: []
+
+output:
+  directory: "results"
+  formats: ["parquet"]
+  streaming: true
+  generate_reports: true
+  metrics:
+    - tir
+    - tbr_l1
+    - tbr_l2
+    - tar_l1
+    - tar_l2
+    - gmi
+    - cv
+
+parallel:
+  enabled: false
+  n_workers: 4

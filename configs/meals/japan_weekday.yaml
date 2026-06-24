@@ -1,0 +1,140 @@
+# Japan weekday meal templates (author-constructed representative national pattern).
+# Meal STRUCTURE is held at carb ranges comparable to the Brazilian/US templates so
+# the cross-country contrast reflects food COMPOSITION (GI, fibre, macros) rather
+# than gross carbohydrate quantity. Foods reference data/taco/japan_foods.csv.
+# NOT validated against the National Health and Nutrition Survey (Japan) microdata
+# -- documented limitation (ASSUMPTIONS).
+
+cafe_da_manha:
+  total_carb_range: [30, 60]
+  offset_from_wake_minutes: 30
+  slots:
+    - category: grain
+      probability: 0.85
+      servings: [1, 1]
+      preferred: ["White rice cooked (japonica)", "Rice ball (onigiri)", "Japanese milk bread (shokupan)"]
+    - category: soup
+      probability: 0.55
+      servings: [1, 1]
+      preferred: ["Miso soup (basic dashi + miso)"]
+    - category: protein
+      probability: 0.45
+      servings: [1, 1]
+      preferred: ["Soft-boiled egg", "Japanese rolled omelette", "Whole egg boiled"]
+    - category: soy
+      probability: 0.35
+      servings: [1, 1]
+      preferred: ["Natto (fermented soybeans)", "Firm tofu"]
+    - category: fish
+      probability: 0.25
+      servings: [1, 1]
+      preferred: ["Horse mackerel grilled", "Sardine grilled"]
+    - category: beverage
+      probability: 0.85
+      servings: [1, 1]
+      preferred: ["Green tea (sencha, unsweetened)", "Barley tea (unsweetened)", "Milk coffee (cafe au lait)"]
+    - category: fruit
+      probability: 0.30
+      servings: [0.5, 1]
+
+lanche_manha:
+  total_carb_range: [10, 25]
+  offset_from_wake_minutes: 180
+  probability: 0.30
+  slots:
+    - category: fruit
+      probability: 0.60
+      servings: [0.5, 1]
+      preferred: ["Satsuma mandarin (mikan)", "Japanese apple"]
+    - category: snack
+      probability: 0.40
+      servings: [0.5, 1]
+      preferred: ["Senbei (rice cracker)", "Arare (small rice crackers)"]
+
+almoco:
+  total_carb_range: [50, 90]
+  offset_from_wake_minutes: 330
+  slots:
+    - category: grain
+      probability: 0.60
+      servings: [1, 1.5]
+      preferred: ["White rice cooked (japonica)", "Sushi rice seasoned", "Rice ball (onigiri)"]
+    - category: noodle
+      probability: 0.40
+      servings: [1, 1.5]
+      preferred: ["Ramen noodles cooked", "Soba noodles cooked", "Udon noodles cooked"]
+    - category: protein
+      probability: 0.70
+      servings: [1, 1]
+      preferred: ["Chicken karaage (fried chicken)", "Pork tonkatsu (breaded pork cutlet)", "Beef rice bowl (gyudon)", "Shrimp tempura"]
+    - category: vegetable
+      probability: 0.55
+      servings: [1, 1]
+    - category: soup
+      probability: 0.45
+      servings: [1, 1]
+      preferred: ["Miso soup (basic dashi + miso)"]
+    - category: beverage
+      probability: 0.70
+      servings: [1, 1]
+      preferred: ["Green tea (sencha, unsweetened)", "Barley tea (unsweetened)"]
+
+lanche_tarde:
+  total_carb_range: [15, 35]
+  offset_from_wake_minutes: 510
+  probability: 0.50
+  slots:
+    - category: dessert
+      probability: 0.45
+      servings: [1, 1]
+      preferred: ["Dorayaki (red bean paste pancake)", "Anpan (red bean paste bun)", "Daifuku mochi (filled rice cake)"]
+    - category: snack
+      probability: 0.40
+      servings: [1, 1]
+      preferred: ["Senbei (rice cracker)", "Arare (small rice crackers)"]
+    - category: beverage
+      probability: 0.55
+      servings: [1, 1]
+      preferred: ["Green tea (sencha, unsweetened)"]
+
+jantar:
+  total_carb_range: [40, 75]
+  offset_from_wake_minutes: 720
+  slots:
+    - category: grain
+      probability: 0.80
+      servings: [1, 1.5]
+      preferred: ["White rice cooked (japonica)", "Brown rice cooked"]
+    - category: fish
+      probability: 0.50
+      servings: [1, 1]
+      preferred: ["Sashimi assorted raw fish", "Grilled eel with tare sauce (unagi)", "Mackerel cooked", "Pacific saury grilled"]
+    - category: protein
+      probability: 0.50
+      servings: [1, 1]
+      preferred: ["Chicken teriyaki", "Japanese-style Hamburg steak", "Pork ginger stir-fry (shogayaki)"]
+    - category: vegetable
+      probability: 0.60
+      servings: [1, 1]
+    - category: soy
+      probability: 0.40
+      servings: [1, 1]
+      preferred: ["Firm tofu", "Silken tofu"]
+    - category: soup
+      probability: 0.45
+      servings: [1, 1]
+      preferred: ["Miso soup (basic dashi + miso)"]
+
+ceia:
+  total_carb_range: [10, 20]
+  offset_before_sleep_minutes: 60
+  probability: 0.20
+  slots:
+    - category: dairy
+      probability: 0.50
+      servings: [1, 1]
+      preferred: ["Plain yogurt (unsweetened)"]
+    - category: fruit
+      probability: 0.45
+      servings: [0.5, 1]
+      preferred: ["Satsuma mandarin (mikan)", "Persimmon"]

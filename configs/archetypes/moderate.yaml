@@ -1,0 +1,92 @@
+# Moderate (Minimally Compliant)
+# Tries to follow guidelines but frequently lapses. Knows what to do
+# but doesn't always do it. The "average" T1D patient — well-intentioned
+# but inconsistent. The pump helps catch some of the slack.
+
+# -- Carb estimation --
+carb_estimation_error_mean: -0.05   # slight underestimation
+carb_estimation_error_std: 0.12     # moderate variability
+
+# -- Meal timing --
+meal_time_variance_minutes: 30.0    # somewhat irregular
+
+# -- Bolus behavior --
+bolus_skip_probability: 0.10        # skips occasionally
+
+# Bolus timing (Fiasp protocol)
+bolus_timing_pre_pct: 0.90          # 90%: usually pre-boluses
+bolus_timing_late_half_pct: 0.07    # 7%: remembered late, half dose
+bolus_timing_forgot_pct: 0.03       # 3%: forgot too long, pump handles it
+pre_bolus_mean_minutes: -5.0        # 5 min before (cuts it closer)
+pre_bolus_std_minutes: 5.0
+late_bolus_mean_minutes: 18.0
+late_bolus_std_minutes: 8.0
+
+# Special bolus events
+double_dose_probability: 0.01       # 1% — rare but happens
+phantom_bolus_probability: 0.05     # 5% — sometimes stacks corrections (anxiety/inexperience)
+rage_bolus_probability: 0.05        # 5% — occasional frustration bolus
+rage_bolus_extra_factor: 1.5        # moderate extra
+
+# -- Bolus calculation --
+cr_error_factor_mean: 1.0           # neutral — sometimes over, sometimes under
+cr_error_factor_std: 0.12           # higher variance captures both over and underdose
+cf_error_factor_mean: 1.0           # neutral — sometimes over, sometimes under
+cf_error_factor_std: 0.12
+iob_consideration: 0.50             # partially considers IOB
+correction_threshold_mg_dl: 190.0   # BUG #5 fix: archetype-specific threshold; moderate corrects at standard threshold
+correction_probability: 0.70        # corrects most of the time
+severe_hyper_onset_minutes: 30.0   # min >=350 antes de auto-resgatar (embotamento: aderente reage antes)
+bolus_rounding_units: 1.0           # rounds to full units
+
+# -- Exercise --
+exercise_probability_weekday: 0.30
+exercise_probability_weekend: 0.40
+exercise_intensity_light_weight: 0.40   # more moderate when they do exercise
+exercise_intensity_moderate_weight: 0.40
+exercise_intensity_vigorous_weight: 0.20
+
+# -- Snacking --
+snack_probability: 0.30             # moderate unplanned snacking
+
+# -- Stress / illness / alcohol --
+stress_probability_per_day: 0.20    # moderate stress
+alcohol_probability_weekend: 0.15   # social drinker
+alcohol_weekday_factor: 0.25
+
+# -- Monitoring --
+monitor_frequency_per_day: 5        # checks BG a few times
+
+# -- Circadian --
+wake_time_weekday_hour: 7.0         # 07:00
+wake_time_weekday_std_minutes: 25.0
+wake_time_weekend_hour: 9.0         # 09:00
+wake_time_weekend_std_minutes: 45.0
+sleep_time_weekday_hour: 23.0       # 23:00
+sleep_time_weekday_std_minutes: 30.0
+sleep_time_weekend_hour: 0.0        # 00:00
+sleep_time_weekend_std_minutes: 45.0
+
+# -- Day-type pattern modifiers --
+weekend_dessert_probability_boost: 0.15
+holiday_dessert_probability_boost: 0.30
+weekend_extra_snack_probability: 0.30
+holiday_extra_snack_probability: 0.50
+weekday_extra_snack_probability: 0.15
+
+# -- Hypo correction --
+hypo_threshold_mg_dl: 70.0          # corrects at 70
+hypo_recheck_minutes: 15.0          # checks every 15 min
+hypo_treatment_preference:           # tries rule of 15, sometimes grabs juice
+  - tablete_glicose
+  - suco
+hypo_overcorrection_factor: 1.2     # mild escalation if not improving
+hypo_max_corrections: 10
+
+# -- Diet --
+diet_adherence: 0.60                # tries but frequently lapses
+
+# -- Pump safety limits (hardware constraints, not patient behavior) --
+max_single_bolus_u: 20.0            # pump hard limit per delivery (units)
+hypo_max_episode_cho_g: 90.0        # stomach capacity per hypo episode (grams)
+iob_hard_limit_u: 0.0              # trusts calculator

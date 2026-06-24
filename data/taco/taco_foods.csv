@@ -1,0 +1,103 @@
+nome_pt,nome_en,categoria,carbs_per_100g,fibra_per_100g,indice_glicemico,porcao_tipica_g,proteina_per_100g,gordura_per_100g
+Arroz branco cozido,White rice cooked,cereal,28.1,1.6,73,150,2.5,0.2
+Arroz integral cozido,Brown rice cooked,cereal,25.8,2.7,50,150,2.6,1.0
+Feijao carioca cozido,Pinto beans cooked,leguminosa,14.0,8.5,39,80,4.8,0.5
+Feijao preto cozido,Black beans cooked,leguminosa,14.0,8.4,30,80,4.5,0.5
+Lentilha cozida,Lentils cooked,leguminosa,16.3,7.9,26,80,6.3,0.5
+Pao frances,French bread roll,panificado,58.6,2.3,75,50,8.0,3.1
+Pao integral,Whole wheat bread,panificado,44.0,6.9,53,50,9.4,3.7
+Pao de queijo,Cheese bread,panificado,34.2,0.5,70,40,6.0,17.0
+Tapioca,Tapioca crepe,cereal,87.8,0.0,85,80,0.0,0.2
+Biscoito cream cracker,Cream cracker,panificado,68.0,2.1,65,30,9.5,14.0
+Cuscuz de milho,Corn couscous,cereal,25.0,2.8,65,150,2.2,0.7
+Macarrao cozido,Pasta cooked,cereal,19.9,1.5,49,200,5.8,0.9
+Farinha de mandioca,Cassava flour,acompanhamento,89.2,6.4,70,20,1.2,0.3
+Farofa,Toasted cassava flour mix,acompanhamento,46.2,5.4,70,30,1.5,12.0
+Mandioca cozida,Boiled cassava,raiz,30.1,1.6,46,100,0.6,0.3
+Batata cozida,Boiled potato,raiz,18.5,1.3,78,150,1.2,0.1
+Batata doce cozida,Boiled sweet potato,raiz,18.2,2.6,46,150,0.6,0.1
+Inhame cozido,Yam cooked,raiz,23.0,1.7,37,100,2.0,0.2
+Banana prata,Silver banana,fruta,22.8,2.0,51,86,1.3,0.1
+Banana nanica,Cavendish banana,fruta,23.8,1.9,62,100,1.4,0.1
+Maca fuji,Fuji apple,fruta,15.2,1.3,36,130,0.3,0.2
+Laranja pera,Pera orange,fruta,8.9,0.8,42,170,1.0,0.1
+Mamao papaya,Papaya,fruta,11.6,1.8,60,170,0.5,0.1
+Manga tommy,Tommy mango,fruta,15.0,1.6,56,150,0.4,0.2
+Abacaxi,Pineapple,fruta,12.3,1.0,66,130,0.5,0.1
+Melancia,Watermelon,fruta,8.1,0.1,76,200,0.9,0.1
+Morango,Strawberry,fruta,6.8,1.7,25,150,0.9,0.3
+Uva italia,Italia grape,fruta,13.7,0.9,53,100,0.7,0.2
+Acai polpa pura,Pure acai pulp,fruta,6.2,2.6,40,100,0.8,3.9
+Acai com granola e banana,Acai bowl with granola and banana,sobremesa,35.0,3.2,55,200,2.0,4.0
+Frango grelhado,Grilled chicken breast,proteina,0.0,0.0,0,120,32.0,3.6
+Carne bovina grelhada,Grilled beef,proteina,0.0,0.0,0,120,32.0,8.0
+Carne suina assada,Roast pork,proteina,0.0,0.0,0,100,28.0,10.0
+Peixe grelhado,Grilled fish,proteina,0.0,0.0,0,120,26.0,3.0
+Ovo cozido,Boiled egg,proteina,0.6,0.0,0,50,13.3,9.5
+Ovo frito,Fried egg,proteina,0.6,0.0,0,60,13.0,14.0
+Linguica calabresa,Calabresa sausage,proteina,2.0,0.0,0,60,15.0,30.0
+Queijo minas,Minas cheese,laticinio,3.2,0.0,0,30,17.4,20.2
+Queijo mussarela,Mozzarella cheese,laticinio,3.0,0.0,0,30,22.0,22.0
+Requeijao cremoso,Cream cheese spread,laticinio,2.5,0.0,0,30,9.5,25.0
+Iogurte natural,Plain yogurt,laticinio,4.1,0.0,36,170,4.1,3.0
+Iogurte com frutas,Fruit yogurt,laticinio,15.0,0.0,45,170,3.8,2.5
+Leite integral,Whole milk,laticinio,4.7,0.0,27,200,3.2,3.5
+Leite desnatado,Skim milk,laticinio,5.1,0.0,32,200,3.4,0.2
+Cafe com leite e acucar,Coffee with milk and sugar,bebida,10.0,0.0,60,200,1.6,1.7
+Cafe com leite sem acucar,Coffee with milk no sugar,bebida,2.5,0.0,27,200,1.6,1.7
+Cafe preto com acucar,Black coffee with sugar,bebida,6.5,0.0,65,50,0.1,0.0
+Suco de laranja natural,Fresh orange juice,bebida,10.5,0.1,50,250,0.7,0.2
+Suco de uva integral,Grape juice,bebida,14.5,0.0,55,200,0.3,0.1
+Refrigerante cola,Cola soda,bebida,10.6,0.0,63,350,0.0,0.0
+Agua de coco,Coconut water,bebida,5.0,0.0,55,250,0.0,0.2
+Cerveja,Beer,bebida,3.5,0.0,66,350,0.5,0.0
+Alface,Lettuce,salada,1.8,1.0,15,50,1.3,0.2
+Tomate,Tomato,salada,3.1,1.2,15,80,1.1,0.2
+Pepino,Cucumber,salada,2.0,0.6,15,80,0.9,0.0
+Cenoura crua,Raw carrot,salada,7.7,3.2,16,60,0.9,0.2
+Beterraba cozida,Cooked beet,salada,7.2,1.9,64,50,1.3,0.1
+Chuchu cozido,Chayote cooked,salada,4.0,1.1,15,60,0.7,0.1
+Vinagrete (molho),Vinaigrette salsa,acompanhamento,4.0,1.0,15,50,0.8,0.3
+Couve refogada,Sauteed collard greens,acompanhamento,4.3,3.1,15,60,2.4,3.0
+Coxinha,Chicken croquette,salgado,28.0,1.0,65,90,7.0,12.0
+Pastel de carne,Fried meat pastry,salgado,30.0,1.0,70,100,8.0,18.0
+Esfiha de carne,Meat esfiha,salgado,25.0,1.2,60,90,9.0,8.0
+Empada de frango,Chicken empada,salgado,22.0,0.8,60,60,7.0,14.0
+Kibe frito,Fried kibbeh,salgado,18.0,2.0,55,80,9.0,12.0
+Bolo de cenoura,Carrot cake,sobremesa,40.0,1.0,67,80,5.0,12.0
+Bolo de chocolate,Chocolate cake,sobremesa,52.0,1.8,65,80,5.5,15.0
+Brigadeiro,Chocolate truffle,sobremesa,67.0,1.0,70,15,3.5,8.0
+Pudim de leite,Flan,sobremesa,35.0,0.0,65,100,5.0,5.0
+Sorvete,Ice cream,sobremesa,24.0,0.5,61,100,3.5,11.0
+Pamonha,Corn pamonha,festa_junina,28.0,1.5,70,150,3.0,5.0
+Canjica,Sweet corn porridge,festa_junina,22.0,1.0,65,200,2.5,3.0
+Pe de moleque,Peanut brittle,festa_junina,65.0,2.0,70,30,12.0,20.0
+Pipoca doce,Sweet popcorn,festa_junina,77.0,4.5,72,30,4.0,5.5
+Quentao,Hot spiced drink,festa_junina,12.0,0.0,60,200,0.0,0.0
+Rabanada,Brazilian French toast,natal,35.0,0.5,70,80,6.0,8.0
+Panetone,Panettone,natal,56.0,2.0,75,80,7.0,10.0
+Chester assado,Roast chester,natal,0.0,0.0,0,120,29.0,5.0
+Salpicao,Chicken salad,natal,12.0,1.0,55,150,8.0,14.0
+Ovo de pascoa,Easter chocolate egg,pascoa,56.0,2.5,43,50,7.0,32.0
+Chocolate ao leite,Milk chocolate,sobremesa,56.0,2.0,43,30,7.5,30.0
+Pao de alho,Garlic bread,churrasco,42.0,1.5,73,50,7.0,12.0
+Coracoes de frango,Grilled chicken hearts,churrasco,0.5,0.0,0,100,26.0,9.0
+Picanha,Top sirloin cap,churrasco,0.0,0.0,0,120,25.0,18.0
+Farofa de bacon,Bacon farofa,churrasco,48.0,4.0,70,30,4.0,20.0
+Granola,Granola,cereal,66.0,6.0,55,40,10.0,12.0
+Aveia em flocos,Rolled oats,cereal,66.6,9.1,55,30,13.9,8.5
+Mel,Honey,acompanhamento,82.4,0.0,61,20,0.3,0.0
+Acucar refinado,Refined sugar,acompanhamento,99.5,0.0,65,5,0.0,0.0
+Margarina,Margarine,gordura,0.3,0.0,0,10,0.0,65.0
+Azeite de oliva,Olive oil,gordura,0.0,0.0,0,10,0.0,100.0
+Manteiga,Butter,gordura,0.1,0.0,0,10,0.4,82.0
+Milho verde cozido,Cooked sweet corn,acompanhamento,19.6,3.9,55,100,3.2,0.6
+Ervilha em conserva,Canned peas,acompanhamento,9.0,4.0,48,60,4.5,0.4
+Soja cozida,Cooked soybean,leguminosa,11.5,5.9,18,80,16.7,6.0
+Pizza margherita,Margherita pizza slice,pronto,30.0,1.5,80,120,11.0,10.0
+Hamburguer com pao,Hamburger with bun,pronto,28.0,1.2,66,180,13.0,12.0
+Feijoada,Feijoada,prato,8.0,3.5,42,300,9.0,9.0
+Moqueca,Fish moqueca,prato,5.0,1.0,30,250,10.0,6.0
+Estrogonofe de frango,Chicken stroganoff,prato,8.0,0.5,45,200,9.0,8.0
+Acaraje,Acaraje,salgado,18.0,3.0,55,120,6.0,12.0
+Caldo de cana,Sugarcane juice,bebida,18.0,0.0,73,250,0.0,0.0

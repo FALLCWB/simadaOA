@@ -1,0 +1,125 @@
+# Japan weekend meal templates (author-constructed representative national pattern).
+# Versus weekday: more noodle/rice-bowl eating out, more wagashi sweets and beer,
+# slightly higher carb ranges. Foods reference data/taco/japan_foods.csv.
+
+cafe_da_manha:
+  total_carb_range: [35, 65]
+  offset_from_wake_minutes: 60
+  slots:
+    - category: grain
+      probability: 0.85
+      servings: [1, 1.5]
+      preferred: ["White rice cooked (japonica)", "Japanese milk bread (shokupan)", "Rice ball (onigiri)"]
+    - category: soup
+      probability: 0.50
+      servings: [1, 1]
+      preferred: ["Miso soup (basic dashi + miso)"]
+    - category: protein
+      probability: 0.50
+      servings: [1, 1]
+      preferred: ["Japanese rolled omelette", "Soft-boiled egg"]
+    - category: soy
+      probability: 0.30
+      servings: [1, 1]
+      preferred: ["Natto (fermented soybeans)"]
+    - category: beverage
+      probability: 0.85
+      servings: [1, 1]
+      preferred: ["Green tea (sencha, unsweetened)", "Milk coffee (cafe au lait)"]
+    - category: fruit
+      probability: 0.35
+      servings: [0.5, 1]
+
+lanche_manha:
+  total_carb_range: [10, 30]
+  offset_from_wake_minutes: 210
+  probability: 0.30
+  slots:
+    - category: fruit
+      probability: 0.55
+      servings: [0.5, 1]
+      preferred: ["Satsuma mandarin (mikan)", "Persimmon"]
+    - category: dessert
+      probability: 0.40
+      servings: [1, 1]
+      preferred: ["Anpan (red bean paste bun)", "Dorayaki (red bean paste pancake)"]
+
+almoco:
+  total_carb_range: [55, 95]
+  offset_from_wake_minutes: 360
+  slots:
+    - category: noodle
+      probability: 0.55
+      servings: [1, 1.5]
+      preferred: ["Ramen noodles cooked", "Udon noodles cooked", "Soba noodles cooked", "Somen noodles cooked"]
+    - category: grain
+      probability: 0.50
+      servings: [1, 1.5]
+      preferred: ["Japanese fried rice (chahan)", "Sushi rice seasoned", "Japanese curry rice (kare raisu)"]
+    - category: protein
+      probability: 0.65
+      servings: [1, 1]
+      preferred: ["Pork tonkatsu (breaded pork cutlet)", "Chicken karaage (fried chicken)", "Gyoza dumplings", "Shrimp tempura"]
+    - category: vegetable
+      probability: 0.50
+      servings: [1, 1]
+    - category: beverage
+      probability: 0.70
+      servings: [1, 1]
+      preferred: ["Green tea (sencha, unsweetened)", "Japanese lager beer"]
+
+lanche_tarde:
+  total_carb_range: [20, 40]
+  offset_from_wake_minutes: 540
+  probability: 0.55
+  slots:
+    - category: dessert
+      probability: 0.55
+      servings: [1, 1.5]
+      preferred: ["Daifuku mochi (filled rice cake)", "Dorayaki (red bean paste pancake)", "Yokan (sweet adzuki jelly bar)"]
+    - category: snack
+      probability: 0.40
+      servings: [1, 1]
+      preferred: ["Senbei (rice cracker)", "Okonomiyaki (savory pancake)"]
+    - category: beverage
+      probability: 0.50
+      servings: [1, 1]
+      preferred: ["Green tea (sencha, unsweetened)"]
+
+jantar:
+  total_carb_range: [45, 85]
+  offset_from_wake_minutes: 750
+  slots:
+    - category: grain
+      probability: 0.80
+      servings: [1, 1.5]
+      preferred: ["White rice cooked (japonica)", "Sushi rice seasoned"]
+    - category: fish
+      probability: 0.55
+      servings: [1, 1]
+      preferred: ["Sashimi assorted raw fish", "Grilled eel with tare sauce (unagi)", "Bluefin tuna (fatty) raw"]
+    - category: protein
+      probability: 0.55
+      servings: [1, 1]
+      preferred: ["Pork tonkatsu (breaded pork cutlet)", "Chicken teriyaki", "Nikujaga meat and potato stew"]
+    - category: vegetable
+      probability: 0.55
+      servings: [1, 1]
+    - category: soy
+      probability: 0.40
+      servings: [1, 1]
+      preferred: ["Firm tofu", "Edamame (boiled green soybeans)"]
+
+ceia:
+  total_carb_range: [10, 25]
+  offset_before_sleep_minutes: 60
+  probability: 0.25
+  slots:
+    - category: dessert
+      probability: 0.50
+      servings: [1, 1]
+      preferred: ["Yokan (sweet adzuki jelly bar)", "Daifuku mochi (filled rice cake)"]
+    - category: fruit
+      probability: 0.40
+      servings: [0.5, 1]
+      preferred: ["Satsuma mandarin (mikan)"]

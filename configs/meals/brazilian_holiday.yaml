@@ -1,0 +1,121 @@
+# Brazilian holiday meal templates
+# Schema matches brazilian_weekday.yaml / brazilian_weekend.yaml so that
+# load_day_meal_plan() can parse it directly.
+#
+# Holiday meals are more caloric and festive: higher carb ceilings,
+# extra sobremesa slots, and indulgent options typical of Brazilian
+# celebrations (Festa Junina, Natal, Carnaval, Pascoa).
+# builder.py loads this file as self._holiday_plan; the old holidays.yaml
+# retains the per-holiday event metadata (festa-junina extras, etc.)
+
+cafe_da_manha:
+  total_carb_range: [40, 80]
+  offset_from_wake_minutes: 45
+  slots:
+    - category: panificado
+      probability: 0.90
+      servings: [1, 3]
+      preferred: ["Pao frances", "Pao de queijo", "Tapioca", "Bolo simples"]
+    - category: bebida
+      probability: 0.95
+      servings: [1, 1]
+      preferred: ["Cafe com leite e acucar", "Chocolate quente"]
+    - category: fruta
+      probability: 0.55
+      servings: [0.5, 1.5]
+    - category: laticinio
+      probability: 0.45
+      servings: [1, 1]
+      preferred: ["Iogurte com frutas", "Queijo minas"]
+    - category: sobremesa
+      probability: 0.30
+      servings: [0.5, 1]
+      preferred: ["Rabanada", "Bolo de milho", "Pamonha"]
+
+almoco:
+  total_carb_range: [70, 130]
+  offset_from_wake_minutes: 300
+  slots:
+    - category: cereal
+      probability: 0.95
+      servings: [1, 2.5]
+      preferred: ["Arroz branco cozido", "Arroz com brodo", "Arroz com passas"]
+    - category: leguminosa
+      probability: 0.90
+      servings: [1, 2]
+      preferred: ["Feijao carioca cozido", "Feijao preto cozido", "Lentilha cozida"]
+    - category: proteina
+      probability: 0.95
+      servings: [1, 2]
+      preferred: ["Chester assado", "Frango assado", "Lombo suino assado"]
+    - category: salada
+      probability: 0.60
+      servings: [1, 1.5]
+    - category: acompanhamento
+      probability: 0.70
+      servings: [1, 2]
+      preferred: ["Farofa de bacon", "Farofa", "Vinagrete (molho)", "Batata assada"]
+    - category: raiz
+      probability: 0.40
+      servings: [0.5, 1.5]
+      preferred: ["Mandioca cozida", "Batata cozida", "Batata-doce cozida"]
+    - category: sobremesa
+      probability: 0.65
+      servings: [0.5, 1.5]
+      preferred: ["Bolo de milho", "Pudim de leite", "Pamonha", "Canjica"]
+
+lanche_tarde:
+  total_carb_range: [20, 50]
+  offset_from_wake_minutes: 510
+  probability: 0.70
+  slots:
+    - category: sobremesa
+      probability: 0.70
+      servings: [1, 2]
+      preferred: ["Bolo simples", "Pe de moleque", "Pipoca doce", "Canjica", "Pamonha"]
+    - category: bebida
+      probability: 0.65
+      servings: [1, 1]
+      preferred: ["Cafe com leite e acucar", "Quentao", "Chocolate quente"]
+    - category: fruta
+      probability: 0.35
+      servings: [0.5, 1]
+
+jantar:
+  total_carb_range: [55, 100]
+  offset_from_wake_minutes: 720
+  slots:
+    - category: cereal
+      probability: 0.85
+      servings: [1, 2]
+      preferred: ["Arroz branco cozido", "Macarrao cozido"]
+    - category: leguminosa
+      probability: 0.75
+      servings: [1, 1.5]
+    - category: proteina
+      probability: 0.90
+      servings: [1, 1.5]
+    - category: salada
+      probability: 0.45
+      servings: [1, 1]
+    - category: sobremesa
+      probability: 0.55
+      servings: [0.5, 1.5]
+      preferred: ["Rabanada", "Bolo de milho", "Panetone", "Pudim de leite"]
+
+ceia:
+  total_carb_range: [15, 35]
+  offset_before_sleep_minutes: 60
+  probability: 0.40
+  slots:
+    - category: sobremesa
+      probability: 0.65
+      servings: [0.5, 1.5]
+      preferred: ["Panetone", "Rabanada", "Pe de moleque"]
+    - category: bebida
+      probability: 0.50
+      servings: [1, 1]
+      preferred: ["Chocolate quente", "Leite integral"]
+    - category: fruta
+      probability: 0.35
+      servings: [0.5, 1]

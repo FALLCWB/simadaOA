@@ -1,0 +1,92 @@
+# Adherent (Careful/Compliant)
+# Follows ADA/SBD guidelines strictly. Regular routines, accurate carb
+# counting, timely insulin delivery, consistent exercise.
+# Has the discipline of someone who has lived with T1D for years and
+# understands the consequences of poor management.
+
+# -- Carb estimation --
+carb_estimation_error_mean: 0.0     # no systematic bias
+carb_estimation_error_std: 0.10     # ~10% random error (counting isn't exact, can be +/-)
+
+# -- Meal timing --
+meal_time_variance_minutes: 10.0    # very consistent schedule
+
+# -- Bolus behavior --
+bolus_skip_probability: 0.02        # very rarely skips (conscious decision)
+
+# Bolus timing (Fiasp protocol: pre-bolus 5-15min before)
+bolus_timing_pre_pct: 0.96          # 96% of time: pre-boluses correctly
+bolus_timing_late_half_pct: 0.03    # 3%: remembered late, gives half dose
+bolus_timing_forgot_pct: 0.01       # 1%: forgot too long, lets pump handle it
+pre_bolus_mean_minutes: -10.0       # 10 min before meal (Fiasp sweet spot)
+pre_bolus_std_minutes: 3.0
+late_bolus_mean_minutes: 15.0
+late_bolus_std_minutes: 5.0
+
+# Special bolus events
+double_dose_probability: 0.0        # never — monitors too carefully
+phantom_bolus_probability: 0.005    # 0.5% — very rare, even disciplined people occasionally
+rage_bolus_probability: 0.01        # 1% — everyone can lose patience, but very rare
+rage_bolus_extra_factor: 1.2        # mild extra if it happens
+
+# -- Bolus calculation --
+cr_error_factor_mean: 1.0           # knows their CR correctly
+cr_error_factor_std: 0.05           # minimal calculation error
+cf_error_factor_mean: 1.0           # knows their CF correctly
+cf_error_factor_std: 0.05
+iob_consideration: 1.0              # fully considers IOB
+correction_threshold_mg_dl: 170.0   # BUG #5 fix: archetype-specific threshold; adherent corrects early
+correction_probability: 0.95        # almost always corrects when needed
+severe_hyper_onset_minutes: 15.0   # min >=350 antes de auto-resgatar (embotamento: aderente reage antes)
+bolus_rounding_units: 0.5           # precise rounding (half-unit)
+
+# -- Exercise --
+exercise_probability_weekday: 0.70
+exercise_probability_weekend: 0.80
+exercise_intensity_light_weight: 0.30   # balanced mix of intensities
+exercise_intensity_moderate_weight: 0.45
+exercise_intensity_vigorous_weight: 0.25
+
+# -- Snacking --
+snack_probability: 0.10             # rarely snacks unplanned
+
+# -- Stress / illness / alcohol --
+stress_probability_per_day: 0.10    # structured life, lower stress
+alcohol_probability_weekend: 0.05   # rarely drinks
+alcohol_weekday_factor: 0.25
+
+# -- Monitoring --
+monitor_frequency_per_day: 10       # checks BG frequently
+
+# -- Circadian --
+wake_time_weekday_hour: 6.5         # 06:30
+wake_time_weekday_std_minutes: 15.0
+wake_time_weekend_hour: 7.5         # 07:30
+wake_time_weekend_std_minutes: 30.0
+sleep_time_weekday_hour: 22.5       # 22:30
+sleep_time_weekday_std_minutes: 20.0
+sleep_time_weekend_hour: 23.5       # 23:30
+sleep_time_weekend_std_minutes: 30.0
+
+# -- Day-type pattern modifiers --
+weekend_dessert_probability_boost: 0.10
+holiday_dessert_probability_boost: 0.20
+weekend_extra_snack_probability: 0.15
+holiday_extra_snack_probability: 0.30
+weekday_extra_snack_probability: 0.05
+
+# -- Hypo correction --
+hypo_threshold_mg_dl: 70.0          # corrects at 70
+hypo_recheck_minutes: 15.0          # patient, waits 15 min before rechecking
+hypo_treatment_preference:           # glucose tablets (precise, adjusts by severity)
+  - tablete_glicose
+hypo_overcorrection_factor: 1.0     # doesn't escalate — takes the same amount each time
+hypo_max_corrections: 10
+
+# -- Diet --
+diet_adherence: 0.95                # follows diet plan strictly
+
+# -- Pump safety limits (hardware constraints, not patient behavior) --
+max_single_bolus_u: 15.0            # pump hard limit per delivery (units)
+hypo_max_episode_cho_g: 60.0        # stomach capacity per hypo episode (grams)
+iob_hard_limit_u: 0.0              # trusts calculator fully

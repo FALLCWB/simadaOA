@@ -1,0 +1,73 @@
+# 14-day stress test — includes perturbations and Festa Junina
+# Designed to evaluate controller robustness
+
+seed: 42
+
+scenario:
+  name: "14day_stress_test"
+  description: "14-day simulation with regime-shift perturbations and holiday"
+  duration_days: 14
+  start_date: "2026-06-15"
+  cohort:
+    size: 30
+    archetype_distribution:
+      adherent: 0.30
+      moderate: 0.50
+      nonadherent: 0.20
+    insulin_regimen_distribution:
+      pump: 0.60
+      mdi: 0.40
+  holidays:
+    - name: "festa_junina"
+      dates: ["2026-06-24"]
+      template: "festa_junina"
+
+meals:
+  locale: "brazil"
+  taco_path: "data/taco/taco_foods.csv"
+  weekend_carb_increase_pct: 15.0
+  holiday_carb_increase_pct: 30.0
+
+behavior:
+  exercise:
+    enabled: true
+  stress:
+    enabled: true
+    illness_probability_per_day: 0.01
+  alcohol:
+    enabled: true
+  snacking:
+    enabled: true
+
+insulin:
+  target_bg: 120.0
+  iob_duration_hours: 4.0
+  dawn_phenomenon: true
+
+perturbations:
+  enabled: true
+  schedule:
+    - type: "sensor_dropout"
+      day: 5
+      duration_minutes: 90
+      affects: "all"
+    - type: "illness_sudden"
+      day_range: [8, 10]
+      magnitude: 1.6
+      affects: "random_20pct"
+    - type: "pump_occlusion_partial"
+      day: 12
+      duration_minutes: 60
+      magnitude: 0.5
+      affects: "pump_patients"
+
+output:
+  directory: "results"
+  formats: ["parquet", "csv"]
+  streaming: true
+  generate_reports: true
+  metrics: ["tir", "tbr_l1", "tbr_l2", "tar_l1", "tar_l2", "gmi", "cv", "lbgi", "hbgi", "mage"]
+
+parallel:
+  enabled: true
+  n_workers: 4

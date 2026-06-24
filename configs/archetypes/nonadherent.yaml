@@ -1,0 +1,94 @@
+# Nonadherent (Careless/Non-compliant)
+# Irregular meals, poor carb estimation, frequent bolus issues, sedentary
+# lifestyle, rarely monitors glucose. Higher risk of both hypo and hyper.
+# Note: even the nonadherent benefits from the insulin pump — it provides
+# basal coverage that catches some of the slack from missed boluses.
+
+# -- Carb estimation --
+carb_estimation_error_mean: -0.15   # systematic underestimation (misses sauces, sides, drinks)
+carb_estimation_error_std: 0.20     # high variability on top of bias
+
+# -- Meal timing --
+meal_time_variance_minutes: 60.0    # very irregular schedule
+
+# -- Bolus behavior --
+bolus_skip_probability: 0.18        # skips ~18% of boluses (pump helps remind)
+
+# Bolus timing (Fiasp protocol — even nonadherent has pump helping)
+bolus_timing_pre_pct: 0.75          # 75%: usually manages to pre-bolus (pump makes it easy)
+bolus_timing_late_half_pct: 0.15    # 15%: remembered late, half dose
+bolus_timing_forgot_pct: 0.10       # 10%: forgot too long, pump handles it
+pre_bolus_mean_minutes: -3.0        # barely pre-boluses (almost at meal time)
+pre_bolus_std_minutes: 8.0          # very inconsistent timing
+late_bolus_mean_minutes: 20.0
+late_bolus_std_minutes: 10.0
+
+# Special bolus events
+double_dose_probability: 0.05       # 5% — forgot if already bolused
+phantom_bolus_probability: 0.08     # 8% — stacks corrections (10.8% dangerous stacking, PMC4454113)
+rage_bolus_probability: 0.05        # 5% — rage-corrects when frustrated by high BG (~1/day max)
+rage_bolus_extra_factor: 1.4        # +40% extra correction dose (not doubling)
+
+# -- Bolus calculation --
+cr_error_factor_mean: 1.15          # CR ~15% above actual → moderate underdose → hyperglycemia
+cr_error_factor_std: 0.15           # inconsistent but not extreme (pump helps)
+cf_error_factor_mean: 1.20          # CF ~20% above actual → insufficient correction
+cf_error_factor_std: 0.15
+iob_consideration: 0.35             # mostly ignores IOB but pump displays it, patient sees it
+correction_threshold_mg_dl: 220.0   # BUG #5 fix: archetype-specific threshold; nonadherent waits longer before correcting
+correction_probability: 0.55        # accepts pump suggestion ~55% of the time
+severe_hyper_onset_minutes: 45.0   # min >=350 antes de auto-resgatar (embotamento: aderente reage antes)
+bolus_rounding_units: 1.0           # pump rounds for them (1U)
+
+# -- Exercise --
+exercise_probability_weekday: 0.10
+exercise_probability_weekend: 0.15
+exercise_intensity_light_weight: 0.70   # mostly light when they do exercise
+exercise_intensity_moderate_weight: 0.25
+exercise_intensity_vigorous_weight: 0.05
+
+# -- Snacking --
+snack_probability: 0.60             # frequent unplanned snacking
+
+# -- Stress / illness / alcohol --
+stress_probability_per_day: 0.30    # chaotic life, higher stress
+alcohol_probability_weekend: 0.30   # drinks frequently on weekends
+alcohol_weekday_factor: 0.25
+
+# -- Monitoring --
+monitor_frequency_per_day: 2        # rarely checks BG
+
+# -- Circadian --
+wake_time_weekday_hour: 7.5         # 07:30
+wake_time_weekday_std_minutes: 45.0
+wake_time_weekend_hour: 10.0        # 10:00
+wake_time_weekend_std_minutes: 60.0
+sleep_time_weekday_hour: 0.5        # 00:30
+sleep_time_weekday_std_minutes: 60.0
+sleep_time_weekend_hour: 2.0        # 02:00
+sleep_time_weekend_std_minutes: 90.0
+
+# -- Day-type pattern modifiers --
+weekend_dessert_probability_boost: 0.25
+holiday_dessert_probability_boost: 0.40
+weekend_extra_snack_probability: 0.45
+holiday_extra_snack_probability: 0.70
+weekday_extra_snack_probability: 0.25
+
+# -- Hypo correction --
+hypo_threshold_mg_dl: 70.0          # corrects at 70
+hypo_recheck_minutes: 12.0          # impatient but CGM interstitial lag 10-15 min limits usefulness
+hypo_treatment_preference:           # prefers soda and juice (too much CHO, imprecise)
+  - refrigerante
+  - suco
+  - tablete_glicose
+hypo_overcorrection_factor: 1.25    # mild escalation per round (not exponential blowup)
+hypo_max_corrections: 5             # stomach capacity limit (~120g CHO max per episode)
+
+# -- Diet --
+diet_adherence: 0.20                # barely follows any diet plan
+
+# -- Pump safety limits (hardware constraints, not patient behavior) --
+max_single_bolus_u: 25.0            # pump hard limit per delivery (units)
+hypo_max_episode_cho_g: 120.0       # stomach capacity per hypo episode (grams)
+iob_hard_limit_u: 20.0             # suppress corrections when IOB exceeds this (units)

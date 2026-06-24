@@ -1,0 +1,130 @@
+# Brazilian weekend meal templates
+# Later meals, more indulgent, churrasco on Sundays
+
+cafe_da_manha:
+  total_carb_range: [35, 70]
+  offset_from_wake_minutes: 30
+  is_brunch: false
+  slots:
+    - category: panificado
+      probability: 0.85
+      servings: [1, 2.5]
+      preferred: ["Pao frances", "Pao de queijo", "Tapioca"]
+    - category: bebida
+      probability: 0.95
+      servings: [1, 1]
+    - category: fruta
+      probability: 0.50
+      servings: [0.5, 1.5]
+    - category: laticinio
+      probability: 0.40
+      servings: [1, 1]
+    - category: proteina
+      probability: 0.30
+      servings: [1, 1]
+      preferred: ["Ovo frito", "Ovo cozido"]
+
+brunch:
+  total_carb_range: [50, 90]
+  offset_from_wake_minutes: 60
+  probability: 0.30
+  replaces: ["cafe_da_manha", "lanche_manha"]
+  slots:
+    - category: panificado
+      probability: 0.90
+      servings: [1, 3]
+    - category: proteina
+      probability: 0.80
+      servings: [1, 1.5]
+    - category: fruta
+      probability: 0.60
+      servings: [1, 2]
+    - category: bebida
+      probability: 0.95
+      servings: [1, 1]
+    - category: sobremesa
+      probability: 0.30
+      servings: [0.5, 1]
+
+almoco:
+  total_carb_range: [55, 100]
+  offset_from_wake_minutes: 300
+  slots:
+    - category: cereal
+      probability: 0.95
+      servings: [1, 2]
+    - category: leguminosa
+      probability: 0.90
+      servings: [1, 1.5]
+    - category: proteina
+      probability: 0.95
+      servings: [1, 1.5]
+    - category: salada
+      probability: 0.55
+      servings: [1, 1]
+    - category: acompanhamento
+      probability: 0.40
+      servings: [0.5, 1.5]
+    - category: sobremesa
+      probability: 0.35
+      servings: [0.5, 1]
+
+churrasco:
+  probability: 0.40
+  day_of_week: "sunday"
+  replaces: ["almoco"]
+  total_carb_range: [40, 90]
+  offset_from_wake_minutes: 300
+  slots:
+    - category: churrasco
+      probability: 0.95
+      servings: [1, 2]
+      preferred: ["Picanha", "Coracoes de frango"]
+    - category: cereal
+      probability: 0.80
+      servings: [1, 1.5]
+      preferred: ["Arroz branco cozido"]
+    - category: acompanhamento
+      probability: 0.80
+      servings: [1, 1.5]
+      preferred: ["Farofa de bacon", "Vinagrete (molho)", "Pao de alho"]
+    - category: salada
+      probability: 0.50
+      servings: [1, 1]
+    - category: bebida
+      probability: 0.50
+      servings: [1, 2]
+      preferred: ["Cerveja", "Refrigerante cola"]
+    - category: sobremesa
+      probability: 0.30
+      servings: [0.5, 1]
+
+jantar:
+  total_carb_range: [35, 65]
+  offset_from_wake_minutes: 660
+  slots:
+    - category: cereal
+      probability: 0.70
+      servings: [1, 1]
+    - category: proteina
+      probability: 0.80
+      servings: [1, 1]
+    - category: salada
+      probability: 0.40
+      servings: [1, 1]
+    - category: salgado
+      probability: 0.25
+      servings: [1, 2]
+      preferred: ["Coxinha", "Pastel de carne", "Esfiha de carne"]
+
+ceia:
+  total_carb_range: [10, 25]
+  offset_before_sleep_minutes: 60
+  probability: 0.30
+  slots:
+    - category: sobremesa
+      probability: 0.50
+      servings: [0.5, 1]
+    - category: laticinio
+      probability: 0.50
+      servings: [1, 1]

@@ -1,0 +1,63 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+*.whl
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# uv
+uv.lock
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Simulation results (large, generated)
+results/
+export/
+# but not the regenerable raw BG traces from the integrator check
+
+# AI assistant files
+.claude/
+.cursor/
+.aider*
+.continue/
+.codeium/
+.copilot/
+.github/copilot/
+.windsurf/
+
+# Environment / secrets
+.env
+.env.*
+*.pem
+*.key
+
+# Corpus fixtures (PDFs not committed)
+tests/fixtures/corpus/*.pdf

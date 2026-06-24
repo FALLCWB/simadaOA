@@ -1,0 +1,55 @@
+{
+  "source": "International Consensus on Time in Range (Battelino et al., Diabetes Care 2019) and Sociedade Brasileira de Diabetes (SBD) Guidelines 2024",
+  "glycemic_targets": {
+    "tir": {
+      "range_mg_dl": [70, 180],
+      "target_pct": 70,
+      "description": "Time in Range"
+    },
+    "tbr_level1": {
+      "range_mg_dl": [54, 69],
+      "target_pct_max": 4,
+      "description": "Time Below Range - Level 1 (hypoglycemia)"
+    },
+    "tbr_level2": {
+      "range_mg_dl": [0, 53],
+      "target_pct_max": 1,
+      "description": "Time Below Range - Level 2 (severe hypoglycemia)"
+    },
+    "tar_level1": {
+      "range_mg_dl": [181, 250],
+      "target_pct_max": 25,
+      "description": "Time Above Range - Level 1 (hyperglycemia)"
+    },
+    "tar_level2": {
+      "range_mg_dl": [251, 999],
+      "target_pct_max": 5,
+      "description": "Time Above Range - Level 2 (severe hyperglycemia)"
+    }
+  },
+  "other_targets": {
+    "gmi": {
+      "target": 7.0,
+      "description": "Glucose Management Indicator (estimated A1C from CGM)"
+    },
+    "cv": {
+      "target_pct_max": 36,
+      "description": "Coefficient of Variation (glycemic variability)"
+    }
+  },
+  "fasting_glucose_mg_dl": {
+    "target": [80, 130],
+    "source": "ADA Standards of Care 2024"
+  },
+  "postprandial_glucose_mg_dl": {
+    "target_max": 180,
+    "timing_hours": 2,
+    "source": "ADA Standards of Care 2024"
+  },
+  "a1c_target_pct": {
+    "general": 7.0,
+    "pediatric": 7.0,
+    "older_adults": 8.0,
+    "source": "ADA Standards of Care 2024 / SBD 2024"
+  }
+}

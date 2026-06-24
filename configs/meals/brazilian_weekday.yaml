@@ -1,0 +1,114 @@
+# Brazilian weekday meal templates
+# Carb ranges based on typical Brazilian portions
+
+cafe_da_manha:
+  total_carb_range: [30, 60]
+  offset_from_wake_minutes: 30
+  slots:
+    - category: panificado
+      probability: 0.80
+      servings: [1, 2]
+      preferred: ["Pao frances", "Pao integral"]
+    - category: bebida
+      probability: 0.95
+      servings: [1, 1]
+      preferred: ["Cafe com leite e acucar", "Cafe com leite sem acucar"]
+    - category: fruta
+      probability: 0.40
+      servings: [0.5, 1]
+    - category: cereal
+      probability: 0.20
+      servings: [0.5, 1]
+      preferred: ["Tapioca", "Aveia em flocos", "Granola"]
+    - category: laticinio
+      probability: 0.30
+      servings: [1, 1]
+      preferred: ["Iogurte natural", "Iogurte com frutas"]
+
+lanche_manha:
+  total_carb_range: [10, 25]
+  offset_from_wake_minutes: 180
+  probability: 0.40
+  slots:
+    - category: fruta
+      probability: 0.70
+      servings: [0.5, 1]
+    - category: panificado
+      probability: 0.30
+      servings: [0.5, 1]
+      preferred: ["Biscoito cream cracker"]
+
+almoco:
+  total_carb_range: [50, 90]
+  offset_from_wake_minutes: 330
+  slots:
+    - category: cereal
+      probability: 0.95
+      servings: [1, 2]
+      preferred: ["Arroz branco cozido", "Arroz integral cozido"]
+    - category: leguminosa
+      probability: 0.90
+      servings: [1, 1.5]
+      preferred: ["Feijao carioca cozido", "Feijao preto cozido"]
+    - category: proteina
+      probability: 0.95
+      servings: [1, 1]
+    - category: salada
+      probability: 0.60
+      servings: [1, 1]
+    - category: acompanhamento
+      probability: 0.30
+      servings: [0.5, 1]
+      preferred: ["Farofa", "Vinagrete (molho)"]
+    - category: raiz
+      probability: 0.20
+      servings: [0.5, 1]
+      preferred: ["Mandioca cozida", "Batata cozida"]
+
+lanche_tarde:
+  total_carb_range: [15, 35]
+  offset_from_wake_minutes: 510
+  probability: 0.60
+  slots:
+    - category: panificado
+      probability: 0.50
+      servings: [1, 1]
+      preferred: ["Pao frances", "Pao de queijo"]
+    - category: bebida
+      probability: 0.60
+      servings: [1, 1]
+      preferred: ["Cafe com leite sem acucar"]
+    - category: fruta
+      probability: 0.40
+      servings: [0.5, 1]
+
+jantar:
+  total_carb_range: [40, 70]
+  offset_from_wake_minutes: 720
+  slots:
+    - category: cereal
+      probability: 0.80
+      servings: [1, 1.5]
+      preferred: ["Arroz branco cozido", "Macarrao cozido"]
+    - category: leguminosa
+      probability: 0.70
+      servings: [1, 1]
+    - category: proteina
+      probability: 0.90
+      servings: [1, 1]
+    - category: salada
+      probability: 0.50
+      servings: [1, 1]
+
+ceia:
+  total_carb_range: [10, 20]
+  offset_before_sleep_minutes: 60
+  probability: 0.25
+  slots:
+    - category: laticinio
+      probability: 0.60
+      servings: [1, 1]
+      preferred: ["Iogurte natural", "Leite integral"]
+    - category: fruta
+      probability: 0.40
+      servings: [0.5, 1]

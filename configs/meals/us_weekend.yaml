@@ -1,0 +1,119 @@
+# US weekend meal templates (author-constructed representative national pattern).
+# Versus weekday: later/larger breakfast (brunch-leaning), more fast food and
+# dessert, slightly higher carb ranges. Foods reference data/taco/us_foods.csv.
+
+cafe_da_manha:
+  total_carb_range: [40, 75]
+  offset_from_wake_minutes: 60
+  slots:
+    - category: grain
+      probability: 0.85
+      servings: [1, 2]
+      preferred: ["Pancakes", "Waffles", "Bagel plain", "English muffin", "White bread"]
+    - category: protein
+      probability: 0.60
+      servings: [1, 1]
+      preferred: ["Eggs scrambled"]
+    - category: beverage
+      probability: 0.90
+      servings: [1, 1]
+      preferred: ["Coffee black", "Orange juice", "Whole milk"]
+    - category: fruit
+      probability: 0.45
+      servings: [0.5, 1]
+    - category: dessert
+      probability: 0.25
+      servings: [0.5, 1]
+      preferred: ["Donut glazed", "Blueberry muffin"]
+
+lanche_manha:
+  total_carb_range: [10, 30]
+  offset_from_wake_minutes: 210
+  probability: 0.30
+  slots:
+    - category: fruit
+      probability: 0.55
+      servings: [0.5, 1]
+    - category: snack
+      probability: 0.45
+      servings: [1, 1]
+      preferred: ["Granola bar oats and honey", "Almonds"]
+
+almoco:
+  total_carb_range: [55, 95]
+  offset_from_wake_minutes: 360
+  slots:
+    - category: fast_food
+      probability: 0.60
+      servings: [1, 1]
+      preferred: ["Cheeseburger", "Pizza cheese", "Burrito beef and bean", "Hot dog with bun", "French fries"]
+    - category: grain
+      probability: 0.45
+      servings: [1, 1.5]
+      preferred: ["White bread", "White rice cooked"]
+    - category: protein
+      probability: 0.55
+      servings: [1, 1]
+      preferred: ["Beef burger patty", "Fried chicken", "Grilled chicken breast"]
+    - category: vegetable
+      probability: 0.45
+      servings: [1, 1]
+    - category: beverage
+      probability: 0.75
+      servings: [1, 1]
+      preferred: ["Coca-Cola", "Beer", "Orange juice"]
+
+lanche_tarde:
+  total_carb_range: [20, 40]
+  offset_from_wake_minutes: 540
+  probability: 0.60
+  slots:
+    - category: snack
+      probability: 0.60
+      servings: [1, 1.5]
+      preferred: ["Tortilla chips", "Potato chips", "Popcorn air-popped", "Pretzels"]
+    - category: dessert
+      probability: 0.35
+      servings: [0.5, 1]
+      preferred: ["Chocolate chip cookies", "Vanilla ice cream"]
+    - category: beverage
+      probability: 0.45
+      servings: [1, 1]
+      preferred: ["Coca-Cola"]
+
+jantar:
+  total_carb_range: [45, 85]
+  offset_from_wake_minutes: 750
+  slots:
+    - category: grain
+      probability: 0.80
+      servings: [1, 1.5]
+      preferred: ["White rice cooked", "Pasta cooked white", "Mashed potato", "Baked potato with skin"]
+    - category: protein
+      probability: 0.85
+      servings: [1, 1]
+      preferred: ["Salmon grilled", "Grilled chicken breast", "Beef burger patty", "Fried chicken"]
+    - category: vegetable
+      probability: 0.60
+      servings: [1, 1]
+    - category: dessert
+      probability: 0.35
+      servings: [0.5, 1]
+      preferred: ["Vanilla ice cream", "Brownie"]
+
+ceia:
+  total_carb_range: [10, 25]
+  offset_before_sleep_minutes: 60
+  probability: 0.30
+  slots:
+    - category: dessert
+      probability: 0.55
+      servings: [0.5, 1]
+      preferred: ["Vanilla ice cream", "Chocolate chip cookies"]
+    - category: dairy
+      probability: 0.35
+      servings: [1, 1]
+      preferred: ["Whole milk"]
+    - category: fruit
+      probability: 0.30
+      servings: [0.5, 1]

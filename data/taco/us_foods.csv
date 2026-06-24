@@ -1,0 +1,96 @@
+nome_pt,nome_en,categoria,carbs_per_100g,fibra_per_100g,indice_glicemico,porcao_tipica_g,proteina_per_100g,gordura_per_100g
+White bread,White bread,grain,49.0,2.4,75,60,9.0,3.3
+Whole wheat bread,Whole wheat bread,grain,43.3,7.4,74,60,13.0,3.5
+Bagel plain,Bagel plain,grain,47.0,1.6,72,105,10.0,1.7
+English muffin,English muffin,grain,47.0,2.5,77,57,8.0,1.8
+Sourdough bread,Sourdough bread,grain,46.5,2.6,54,60,8.5,1.5
+Whole grain bread,Whole grain bread,grain,41.0,6.0,53,60,13.0,4.2
+Pancakes,Pancakes,grain,37.0,1.6,66,120,6.4,7.0
+Waffles,Waffles,grain,38.5,1.4,76,75,7.9,14.0
+Oatmeal cooked,Oatmeal cooked,grain,12.0,1.7,55,240,2.4,1.5
+Rolled oats dry,Rolled oats dry,grain,66.3,10.1,55,40,13.2,6.5
+Cornflakes,Cornflakes,grain,84.2,2.8,81,30,7.5,0.4
+Cheerios,Cheerios,grain,74.0,8.0,74,28,12.0,7.0
+Granola,Granola,grain,64.0,5.0,62,60,10.0,13.0
+Instant oatmeal plain,Instant oatmeal plain,grain,62.0,5.7,79,28,11.0,6.0
+Bran flakes,Bran flakes,grain,74.9,13.0,74,40,10.0,2.0
+White rice cooked,White rice cooked,grain,28.1,0.3,73,150,2.7,0.3
+Brown rice cooked,Brown rice cooked,grain,22.8,1.8,68,150,2.6,0.9
+Pasta cooked white,Pasta cooked white,grain,25.0,1.2,49,200,5.8,0.9
+Pasta whole wheat cooked,Pasta whole wheat cooked,grain,23.0,3.9,42,200,5.3,0.5
+Macaroni and cheese,Macaroni and cheese,grain,25.0,0.5,64,240,8.0,10.0
+Tortilla flour,Tortilla flour,grain,50.8,2.9,30,45,8.0,7.0
+Tortilla corn,Tortilla corn,grain,44.6,5.8,52,26,5.7,2.5
+Quinoa cooked,Quinoa cooked,grain,21.5,2.8,53,180,4.4,1.9
+Baked potato with skin,Baked potato with skin,vegetable,21.4,2.2,85,150,2.5,0.1
+Boiled potato,Boiled potato,vegetable,17.0,1.4,78,150,1.9,0.1
+Mashed potato,Mashed potato,vegetable,16.5,1.2,83,200,1.9,4.2
+Sweet potato baked,Sweet potato baked,vegetable,20.7,3.3,82,130,2.0,0.1
+French fries,French fries,fast_food,35.7,3.5,75,150,3.4,15.0
+Broccoli cooked,Broccoli cooked,vegetable,7.2,3.3,15,130,2.4,0.4
+Carrots raw,Carrots raw,vegetable,9.6,2.8,39,80,0.9,0.2
+Spinach raw,Spinach raw,vegetable,3.6,2.2,15,85,2.9,0.4
+Corn cooked,Corn cooked,vegetable,18.7,2.7,52,150,3.4,1.5
+Green peas cooked,Green peas cooked,vegetable,14.5,5.1,51,80,5.4,0.4
+Romaine lettuce,Romaine lettuce,vegetable,2.4,2.1,15,85,1.2,0.3
+Tomato raw,Tomato raw,vegetable,3.9,1.2,30,120,0.9,0.2
+Onion raw,Onion raw,vegetable,9.3,1.7,10,80,1.1,0.1
+Avocado,Avocado,fruit,8.5,6.7,10,150,2.0,15.0
+Apple raw,Apple raw,fruit,13.8,2.4,36,180,0.3,0.2
+Banana,Banana,fruit,22.8,2.6,51,120,1.1,0.3
+Orange,Orange,fruit,11.8,2.4,43,130,0.9,0.1
+Grapes,Grapes,fruit,17.2,0.9,53,150,0.7,0.2
+Strawberries,Strawberries,fruit,7.7,2.0,40,150,0.7,0.3
+Blueberries,Blueberries,fruit,14.5,2.4,53,140,0.7,0.3
+Watermelon,Watermelon,fruit,7.6,0.4,76,280,0.6,0.2
+Peach,Peach,fruit,9.5,1.5,42,150,0.9,0.3
+Mango,Mango,fruit,15.0,1.6,51,165,0.8,0.4
+Pineapple,Pineapple,fruit,13.1,1.4,59,165,0.5,0.1
+Pear,Pear,fruit,15.2,3.1,38,166,0.4,0.1
+Whole milk,Whole milk,dairy,4.8,0.0,39,240,3.2,3.3
+Reduced-fat milk 2pct,Reduced-fat milk 2pct,dairy,4.9,0.0,32,240,3.3,2.0
+Plain yogurt whole milk,Plain yogurt whole milk,dairy,4.7,0.0,35,170,3.5,3.3
+Greek yogurt plain,Greek yogurt plain,dairy,3.6,0.0,11,170,9.0,3.0
+Flavored yogurt,Flavored yogurt,dairy,19.0,0.0,52,170,3.5,2.0
+Cheddar cheese,Cheddar cheese,dairy,1.3,0.0,0,28,25.0,33.0
+Cottage cheese,Cottage cheese,dairy,3.4,0.0,30,110,11.0,4.3
+Vanilla ice cream,Vanilla ice cream,dessert,23.6,0.0,57,87,3.5,11.0
+Eggs scrambled,Eggs scrambled,protein,1.6,0.0,0,100,10.0,15.0
+Grilled chicken breast,Grilled chicken breast,protein,0.0,0.0,0,120,31.0,3.6
+Fried chicken,Fried chicken,protein,7.8,0.3,45,150,22.0,12.0
+Tuna canned in water,Tuna canned in water,protein,0.0,0.0,0,85,26.0,1.0
+Salmon grilled,Salmon grilled,protein,0.0,0.0,0,120,25.0,13.0
+Beef burger patty,Beef burger patty,protein,0.0,0.0,0,100,25.0,17.0
+Cheeseburger,Cheeseburger,fast_food,24.0,1.2,66,154,15.0,13.0
+Hot dog with bun,Hot dog with bun,fast_food,21.5,0.9,60,105,11.0,15.0
+Pizza cheese,Pizza cheese,fast_food,29.0,2.0,80,200,11.0,10.0
+Chicken nuggets,Chicken nuggets,fast_food,15.8,0.5,66,100,15.0,14.0
+Burrito beef and bean,Burrito beef and bean,fast_food,28.0,2.5,65,210,9.0,8.0
+Grilled cheese sandwich,Grilled cheese sandwich,fast_food,29.0,1.5,65,120,11.0,16.0
+BLT sandwich,BLT sandwich,fast_food,26.0,2.0,60,182,10.0,12.0
+Chicken sandwich grilled,Chicken sandwich grilled,fast_food,28.0,1.8,55,180,14.0,6.0
+Soup tomato canned,Soup tomato canned,soup,9.0,0.5,52,240,1.6,1.8
+Black beans cooked,Black beans cooked,legume,23.7,8.7,30,130,8.9,0.5
+Kidney beans cooked,Kidney beans cooked,legume,22.8,7.4,24,130,8.7,0.5
+Chickpeas cooked,Chickpeas cooked,legume,27.4,7.6,28,130,8.9,2.6
+Lentils cooked,Lentils cooked,legume,20.1,7.9,32,130,9.0,0.4
+Peanut butter,Peanut butter,protein,19.6,5.9,14,32,25.0,50.0
+Almonds,Almonds,snack,21.6,12.5,0,28,21.0,49.0
+Walnuts,Walnuts,snack,13.7,6.7,15,28,15.0,65.0
+Potato chips,Potato chips,snack,52.9,4.4,57,28,7.0,35.0
+Tortilla chips,Tortilla chips,snack,64.4,4.9,63,28,7.0,24.0
+Popcorn air-popped,Popcorn air-popped,snack,77.8,14.5,65,28,12.0,4.0
+Pretzels,Pretzels,snack,79.8,2.8,83,28,10.0,3.0
+Granola bar oats and honey,Granola bar oats and honey,snack,64.2,2.5,61,47,8.0,14.0
+Peanut butter crackers,Peanut butter crackers,snack,57.0,2.5,52,39,11.0,24.0
+Chocolate chip cookies,Chocolate chip cookies,dessert,58.6,1.6,77,30,5.0,25.0
+Donut glazed,Donut glazed,dessert,51.0,1.0,75,60,4.0,22.0
+Blueberry muffin,Blueberry muffin,dessert,52.0,1.6,59,113,5.0,12.0
+Brownie,Brownie,dessert,54.0,1.6,43,56,5.0,22.0
+Coca-Cola,Coca-Cola,beverage,10.6,0.0,63,355,0.0,0.0
+Orange juice,Orange juice,beverage,10.4,0.2,50,240,0.7,0.2
+Apple juice unsweetened,Apple juice unsweetened,beverage,11.3,0.1,41,240,0.1,0.1
+Gatorade,Gatorade,beverage,5.9,0.0,78,360,0.0,0.0
+Chocolate milk,Chocolate milk,beverage,10.4,0.3,34,240,3.2,2.5
+Coffee black,Coffee black,beverage,0.0,0.0,0,240,0.1,0.0
+Beer,Beer,beverage,3.6,0.0,66,355,0.5,0.0
